@@ -1,0 +1,38 @@
+﻿@using GreenSpecial.Areas.ViewModels;
+@model CreateMealVM
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div azik class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Basic form elements</h4>
+                        <p class="card-description">
+                            Creating Meal
+                        </p>
+                        <form class="forms-sample" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label asp-for="Name" for="exampleInputName1">Name</label>
+                                <input asp-for="Name" class="form-control" id="exampleInputName1" placeholder="Name">
+                                <span asp-validation-for="Name" ></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Price" for="exampleInputEmail3">Price</label>
+                                <input asp-for="Price" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                                <span asp-validation-for="Price"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Photo" for="exampleInputPassword4">Image</label>
+                                <input asp-for="Photo" class="form-control" id="exampleInputPassword4" placeholder="Image">
+                                <span asp-validation-for="Photo"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

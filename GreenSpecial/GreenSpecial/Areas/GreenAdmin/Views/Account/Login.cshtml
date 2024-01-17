@@ -1,0 +1,92 @@
+﻿@{
+    Layout = null;
+}
+@using GreenSpecial.Areas.ViewModels.Account;
+@model LoginVM
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Majestic Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/admin/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/admin/vendors/base/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/admin/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="~/admin/images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
+                <div class="row flex-grow">
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                        <div class="auth-form-transparent text-left p-3">
+                            <div class="brand-logo">
+                                <img src="~/admin/images/logo.svg" alt="logo">
+                            </div>
+                            <h4>Welcome back!</h4>
+                            <h6 class="font-weight-light">Happy to see you again!</h6>
+                            <form class="pt-3" method="post">
+                                <div class="form-group">
+                                    <label asp-for="UsernameOrEmail" for="exampleInputEmail">Username Or Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-account-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input asp-for="UsernameOrEmail" class="form-control form-control-lg border-left-0" id="exampleInputEmail" placeholder="Username Or Email">
+                                        <span asp-validation-for="UsernameOrEmail" class="text-warning"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Password" for="exampleInputPassword">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-lock-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input asp-for="Password" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password">
+                                        <span asp-validation-for="Password" class="text-warning"></span>
+                                    </div>
+                                </div>
+                                <label asp-for="IsRemembered">Remember Me</label>
+                                <input asp-for="IsRemembered"/>
+                                <button type="submit">
+                                  <span class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="/GreenAdmin/Account/Login">LOGIN</span>
+                              </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 login-half-bg d-flex flex-row">
+                        <p class="text-white font-weight-medium text-center flex-grow align-self-end">Copyright &copy; 2020  All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/admin/vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="~/admin/js/off-canvas.js"></script>
+    <script src="~/admin/js/hoverable-collapse.js"></script>
+    <script src="~/adminjs/template.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>
