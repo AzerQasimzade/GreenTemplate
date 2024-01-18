@@ -46,13 +46,18 @@ namespace GreenSpecial.Utilities.Extensions
             }
             return false;
         }
-        public static void DeleteFile(this string file,string root,params string[] folders)
+        public static void DeleteFile(this string filename,string root,params string[] folders)
         {
             string path = root;
           
             for (int i = 0; i < folders.Length; i++)
             {
-
+                Path.Combine(folders[i]);
+            }
+            path = Path.Combine(root, filename);
+            if (File.Exists(path))
+            {
+                File.Delete(path);
             }
         }
     }

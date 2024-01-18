@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GreenSpecial.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240117123434_CreateAspNetUsers")]
-    partial class CreateAspNetUsers
+    [Migration("20240118074139_createallthingrepeat")]
+    partial class createallthingrepeat
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
